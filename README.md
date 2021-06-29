@@ -1,5 +1,5 @@
-#COMPUTER ENGINEERING
+**Computer Engineering**
 
-**Projects and Codes developed during my bachelor degree in Computer Engineering at UTFPR-PB**
+Projects, Algorithms and Codes developed during my bachelor degree in Computer Engineering at UTFPR-PB
 
-###Some of Subjects:
+Some of the subjects are:
