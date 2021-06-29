@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Pause.h>
+
+/*
+*/
+int main (void)
+{
+    char Continuar,Opcao;
+    do
+    {
+        system("cls");
+        printf("\n_____________________________________________________________________________________\n");
+        printf(" ");
+        printf("_____________________________________________________________________________________\n");
+        printf("Opcao: ");
+        scanf("%c",&Opcao);
+        switch
+        {
+            case:''
+            {
+                
+                break;
+            }
+        }
+        printf("_____________________________________________________________________________________\n\n");
+        printf("\n                           Executar Novamente (S/s para Sim): ");
+        fflush(stdin);
+        scanf("%c",&Continuar);
+
+    }while(Continuar == 's' || Continuar == 'S');
+    Pause();
+}
