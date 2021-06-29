@@ -3,7 +3,7 @@
 Some of the projects, exercises, algorithms and data structures developed during my bachelor degree in Computer Engineering at UTFPR-PB
 
 
-#Programming Fundamentals (C):
+#Programming Fundamentals **(C)**:
 	Sequencial Structures
 	Decision Structures
 	Repetition Structures
@@ -12,7 +12,7 @@ Some of the projects, exercises, algorithms and data structures developed during
 	Functions
 	Lists of Exercises 
 
-#Algorithms and Data Structures (C):
+#Algorithms and Data Structures **(C)**:
 	Sorting Algorithms (Merge, Quick, Bubble, Insertion)
 	Searching Algorithms (Binary, Breadth-first, Depth-first, Dijkstra, Prim)
 	Data Structures (Stack, List, Hash, Sparse Matrix, Graphs, Trees)
