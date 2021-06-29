@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+struct lol
+{
+	int Linha,Coluna;
+};
+
+typedef struct lol Loc;
+
+int main()
+{
+
+	int l,c,t;
+	int i,f,LocS[2];
+	int Saida[5000];
+
+	scanf("%d %d",&c,&l);
+
+	char matriz[c][l];
+
+	t= l*c;
+
+	Loc ll[t];
+
+	for (i=0;i<c;i++)
+	{
+		scanf("%s",&matriz[i]);
+	}
+
+	for (i=0;i<c;i++)
+	{
+		for (f=0;f<l;f++)
+		{
+			if(matriz[i][f] == 'Z')
+			{
+				if(matriz[i+1][f]!='Z')
+				{
+					matriz[i+1][f] = '#';
+				}
+				if(matriz[i-1][f]!='Z')
+				{
+					matriz[i-1][f] = '#';
+				}
+				if(matriz[i][f+1]!='Z')
+				{
+					matriz[i][f+1] = '#';
+				}
+				if(matriz[i][f-1]!='Z')
+				{
+					matriz[i][f-1] = '#';
+				}
+			}
+		}
+	}
+
+
+	for (i=0;i<c;i++)
+	{
+		for (f=0;f<l;f++)
+		{
+			if(matriz[i][f] == 'R')
+			{
+				ll[0].Linha[0]=i;
+				ll[0].Coluna[1]=f;
+			}
+		}
+	}
+
+	for (i=0;i<c;i++)
+	{
+		for (f=0;f<l;f++)
+		{
+			if(matriz[i][f] == 'S')
+			{
+				LocS[0]=i;
+				LocS[1]=f;
+			}
+		}
+	}
+
+
+
+	for (i=0;i<c;i++)
+	{
+		for (f=0;f<l;f++)
+		{
+			printf("%c",matriz[i][f]);
+		}
+		printf("\n");
+	}
+
+	printf("%c\n",matriz[ll[0].LocR[0]][ll[0].LocR[1]]);
+	printf("%c\n",matriz[LocS[0]][LocS[1]] );
+
+	
+}
