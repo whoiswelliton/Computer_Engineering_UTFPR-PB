@@ -1,0 +1,492 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: top02.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top02.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top02"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : top02
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/meupacote02.vhd" in Library work.
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/clkgen2.vhd" in Library work.
+Entity <clkgen2> compiled.
+Entity <clkgen2> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/clkgen4.vhd" in Library work.
+Entity <clkgen4> compiled.
+Entity <clkgen4> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/clkgen8.vhd" in Library work.
+Entity <clkgen8> compiled.
+Entity <clkgen8> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/clkgen16.vhd" in Library work.
+Entity <clkgen16> compiled.
+Entity <clkgen16> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Xilinx/Projects/PR5/EX02/top02.vhd" in Library work.
+Architecture behavioral of Entity top02 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top02> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkgen2> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clkgen4> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clkgen8> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clkgen16> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top02> in library <work> (Architecture <behavioral>).
+Entity <top02> analyzed. Unit <top02> generated.
+
+Analyzing Entity <clkgen2> in library <work> (Architecture <Behavioral>).
+Entity <clkgen2> analyzed. Unit <clkgen2> generated.
+
+Analyzing Entity <clkgen4> in library <work> (Architecture <Behavioral>).
+Entity <clkgen4> analyzed. Unit <clkgen4> generated.
+
+Analyzing Entity <clkgen8> in library <work> (Architecture <Behavioral>).
+Entity <clkgen8> analyzed. Unit <clkgen8> generated.
+
+Analyzing Entity <clkgen16> in library <work> (Architecture <Behavioral>).
+Entity <clkgen16> analyzed. Unit <clkgen16> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clkgen2>.
+    Related source file is "C:/Xilinx/Projects/PR5/EX02/clkgen2.vhd".
+    Found 1-bit register for signal <clk>.
+    Found 27-bit up counter for signal <i>.
+    Found 1-bit register for signal <v_clk>.
+    Found 27-bit adder for signal <v_clk$add0000> created at line 26.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clkgen2> synthesized.
+
+
+Synthesizing Unit <clkgen4>.
+    Related source file is "C:/Xilinx/Projects/PR5/EX02/clkgen4.vhd".
+    Found 1-bit register for signal <clk>.
+    Found 28-bit up counter for signal <i>.
+    Found 1-bit register for signal <v_clk>.
+    Found 28-bit adder for signal <v_clk$add0000> created at line 26.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clkgen4> synthesized.
+
+
+Synthesizing Unit <clkgen8>.
+    Related source file is "C:/Xilinx/Projects/PR5/EX02/clkgen8.vhd".
+    Found 1-bit register for signal <clk>.
+    Found 29-bit up counter for signal <i>.
+    Found 1-bit register for signal <v_clk>.
+    Found 29-bit adder for signal <v_clk$add0000> created at line 26.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clkgen8> synthesized.
+
+
+Synthesizing Unit <clkgen16>.
+    Related source file is "C:/Xilinx/Projects/PR5/EX02/clkgen16.vhd".
+    Found 1-bit register for signal <clk>.
+    Found 30-bit up counter for signal <i>.
+    Found 1-bit register for signal <v_clk>.
+    Found 30-bit adder for signal <v_clk$add0000> created at line 26.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clkgen16> synthesized.
+
+
+Synthesizing Unit <top02>.
+    Related source file is "C:/Xilinx/Projects/PR5/EX02/top02.vhd".
+Unit <top02> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 27-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 29-bit adder                                          : 1
+ 30-bit adder                                          : 1
+# Counters                                             : 4
+ 27-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+ 29-bit up counter                                     : 1
+ 30-bit up counter                                     : 1
+# Registers                                            : 8
+ 1-bit register                                        : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 27-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 29-bit adder                                          : 1
+ 30-bit adder                                          : 1
+# Counters                                             : 4
+ 27-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+ 29-bit up counter                                     : 1
+ 30-bit up counter                                     : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top02> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top02, actual ratio is 21.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 122
+ Flip-Flops                                            : 122
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top02.ngr
+Top Level Output File Name         : top02
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 861
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 221
+#      LUT2                        : 119
+#      LUT3                        : 1
+#      LUT4                        : 27
+#      MUXCY                       : 250
+#      VCC                         : 1
+#      XORCY                       : 228
+# FlipFlops/Latches                : 122
+#      FDC                         : 110
+#      FDCE                        : 4
+#      FDE                         : 4
+#      FDP                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 1
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      202  out of    960    21%  
+ Number of Slice Flip Flops:            122  out of   1920     6%  
+ Number of 4 input LUTs:                381  out of   1920    19%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of     83     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+mclk                               | BUFGP                  | 122   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 118   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.884ns (Maximum Frequency: 126.842MHz)
+   Minimum input arrival time before clock: 3.796ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 7.884ns (frequency: 126.842MHz)
+  Total number of paths / destination ports: 53199 / 126
+-------------------------------------------------------------------------
+Delay:               7.884ns (Levels of Logic = 32)
+  Source:            map4/i_1 (FF)
+  Destination:       map4/clk (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: map4/i_1 to map4/clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.532  map4/i_1 (map4/i_1)
+     LUT1:I0->O            1   0.612   0.000  map4/Madd_v_clk_add0000_cy<1>_rt (map4/Madd_v_clk_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  map4/Madd_v_clk_add0000_cy<1> (map4/Madd_v_clk_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<2> (map4/Madd_v_clk_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<3> (map4/Madd_v_clk_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<4> (map4/Madd_v_clk_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<5> (map4/Madd_v_clk_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<6> (map4/Madd_v_clk_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<7> (map4/Madd_v_clk_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<8> (map4/Madd_v_clk_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<9> (map4/Madd_v_clk_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<10> (map4/Madd_v_clk_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<11> (map4/Madd_v_clk_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<12> (map4/Madd_v_clk_add0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<13> (map4/Madd_v_clk_add0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<14> (map4/Madd_v_clk_add0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<15> (map4/Madd_v_clk_add0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<16> (map4/Madd_v_clk_add0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<17> (map4/Madd_v_clk_add0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<18> (map4/Madd_v_clk_add0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<19> (map4/Madd_v_clk_add0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  map4/Madd_v_clk_add0000_cy<20> (map4/Madd_v_clk_add0000_cy<20>)
+     XORCY:CI->O           1   0.699   0.509  map4/Madd_v_clk_add0000_xor<21> (map4/v_clk_add0000<21>)
+     LUT2:I0->O            1   0.612   0.000  map4/i_cmp_eq0000_wg_lut<0> (map4/i_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  map4/i_cmp_eq0000_wg_cy<0> (map4/i_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<1> (map4/i_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<2> (map4/i_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<3> (map4/i_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<4> (map4/i_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<5> (map4/i_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  map4/i_cmp_eq0000_wg_cy<6> (map4/i_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          32   0.289   1.142  map4/i_cmp_eq0000_wg_cy<7> (map4/i_cmp_eq0000)
+     LUT2:I1->O            1   0.612   0.000  map4/Mcount_i_eqn_01 (map4/Mcount_i_eqn_0)
+     FDP:D                     0.268          map4/i_0
+    ----------------------------------------
+    Total                      7.884ns (5.701ns logic, 2.183ns route)
+                                       (72.3% logic, 27.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.796ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       map1/clk (FF)
+  Destination Clock: mclk rising
+
+  Data Path: reset to map1/clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           119   1.106   1.096  reset_IBUF (reset_IBUF)
+     INV:I->O              4   0.612   0.499  map1/reset_inv1_INV_0 (map1/reset_inv)
+     FDE:CE                    0.483          map1/clk
+    ----------------------------------------
+    Total                      3.796ns (2.201ns logic, 1.595ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            map1/clk (FF)
+  Destination:       clk1 (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: map1/clk to clk1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.514   0.357  map1/clk (map1/clk)
+     OBUF:I->O                 3.169          clk1_OBUF (clk1)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.85 secs
+ 
+--> 
+
+Total memory usage is 4521440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

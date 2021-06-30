@@ -1,0 +1,6 @@
+V3 3
+FL C:/Xilinx/Projects/mux4x2/mux4x2.vhd 2019/08/27.19:56:31 P.20131013
+EN work/mux4x2 1567463282 FL C:/Xilinx/Projects/mux4x2/mux4x2.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux4x2/arq 1567463283 \
+      FL C:/Xilinx/Projects/mux4x2/mux4x2.vhd EN work/mux4x2 1567463282

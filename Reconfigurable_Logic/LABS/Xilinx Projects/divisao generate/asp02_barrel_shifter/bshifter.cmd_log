@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/bshifter.xst" -ofn "C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/bshifter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc port_map.ucf -p xc3s100e-cp132-5 bshifter.ngc bshifter.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o bshifter_map.ncd bshifter.ngd bshifter.pcf 
+par -w -intstyle ise -ol high -t 1 bshifter_map.ncd bshifter.ncd bshifter.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml bshifter.twx bshifter.ncd -o bshifter.twr bshifter.pcf -ucf port_map.ucf 
+bitgen -intstyle ise -f bshifter.ut bshifter.ncd 

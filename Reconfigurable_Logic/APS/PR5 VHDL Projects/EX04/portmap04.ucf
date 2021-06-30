@@ -1,0 +1,24 @@
+net reset loc = G12;
+net mclk loc = B8;
+
+#CONTADOR ONEHOT QUE SELECIONA OS DISPLAYS PELO ANODO
+net aux4(0) loc= M5;
+net aux4(1) loc= M11;
+net aux4(2) loc= P7;
+net aux4(3) loc= P6;
+
+# SELECIONA-DISPLAY
+net anodos(3) loc= k14;
+net anodos(2) loc= m13;
+net anodos(1) loc= j12;
+net anodos(0) loc= f12;
+
+# SAIDA LEDS DISPLAY
+net catodos(7) loc= n13;
+net catodos(6) loc= m12;
+net catodos(5) loc= l13;
+net catodos(4) loc= p12;
+net catodos(3) loc= n11;
+net catodos(2) loc= n14;
+net catodos(1) loc= h12;
+net catodos(0) loc= l14;

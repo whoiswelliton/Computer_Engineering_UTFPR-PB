@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\Projects\PR5\EX04\top04.ncd
+OUTFILE=C:\Xilinx\Projects\PR5\EX04\top04.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Xilinx\Projects\PR5\EX04
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,7 @@
+work	"clkgen2.vhd"
+work	"clkgen4.vhd"
+work	"decod7seg.vhd"
+work	"dem2x4.vhd"
+work	"meupacote04.vhd"
+work	"mux2x1.vhd"
+work	"top04.vhd"

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ricardo\Xilinx\asp02_barrel_shifter\bshifter.ncd
+OUTFILE=C:\Users\Ricardo\Xilinx\asp02_barrel_shifter\bshifter.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Users\Ricardo\Xilinx\asp02_barrel_shifter
+LICENSE=WebPack
+USER_INFO=179504511_180332158_0_034

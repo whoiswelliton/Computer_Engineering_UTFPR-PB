@@ -1,0 +1,2 @@
+vhdl isim_temp "Binario_Gray.vhd"
+vhdl isim_temp "tb_bin_gray.vhd"

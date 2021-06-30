@@ -1,0 +1,5 @@
+work	"clkgen16.vhd"
+work	"clkgen2.vhd"
+work	"clkgen4.vhd"
+work	"clkgen8.vhd"
+work	"top02.vhd"
