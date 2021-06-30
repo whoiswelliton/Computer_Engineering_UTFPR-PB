@@ -1,8 +1,0 @@
-V3 3
-FL C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/bshifter.vhd 2019/09/23.19:20:35 P.20131013
-EN work/bshifter 1569280215 \
-      FL C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/bshifter.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/bshifter/arq 1569280216 \
-      FL C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/bshifter.vhd \
-      EN work/bshifter 1569280215

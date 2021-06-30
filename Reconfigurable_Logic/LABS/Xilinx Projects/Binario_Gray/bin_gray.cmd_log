@@ -1,8 +1,0 @@
-xst -intstyle ise -ifn "C:/aula/Binario_Gray/bin_gray.xst" -ofn "C:/aula/Binario_Gray/bin_gray.syr" 
-vhdtdtfi -lib work Binario_Gray.vhd -prj Binario_Gray -o bin_gray.spl -module bin_gray -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e bin_gray.spl C:/aula/Binario_Gray/bin_gray.sym 
-xst -intstyle ise -ifn "C:/aula/Binario_Gray/bin_gray.xst" -ofn "C:/aula/Binario_Gray/bin_gray.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 bin_gray.ngc bin_gray.ngd  
-map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o bin_gray_map.ncd bin_gray.ngd bin_gray.pcf 
-par -w -intstyle ise -ol high -t 1 bin_gray_map.ncd bin_gray.ncd bin_gray.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml bin_gray.twx bin_gray.ncd -o bin_gray.twr bin_gray.pcf 

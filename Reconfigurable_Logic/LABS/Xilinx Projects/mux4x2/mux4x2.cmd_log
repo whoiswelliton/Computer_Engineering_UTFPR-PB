@@ -1,9 +1,0 @@
-xst -intstyle ise -ifn "C:/Xilinx/Projects/mux4x2/mux4x2.xst" -ofn "C:/Xilinx/Projects/mux4x2/mux4x2.syr" 
-xst -intstyle ise -ifn "C:/Xilinx/Projects/mux4x2/mux4x2.xst" -ofn "C:/Xilinx/Projects/mux4x2/mux4x2.syr" 
-xst -intstyle ise -ifn "C:/Xilinx/Projects/mux4x2/mux4x2.xst" -ofn "C:/Xilinx/Projects/mux4x2/mux4x2.syr" 
-xst -intstyle ise -ifn "C:/Xilinx/Projects/mux4x2/mux4x2.xst" -ofn "C:/Xilinx/Projects/mux4x2/mux4x2.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 mux4x2.ngc mux4x2.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mux4x2_map.ncd mux4x2.ngd mux4x2.pcf 
-par -w -intstyle ise -ol high -t 1 mux4x2_map.ncd mux4x2.ncd mux4x2.pcf 
-trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mux4x2.twx mux4x2.ncd -o mux4x2.twr mux4x2.pcf 
-bitgen -intstyle ise -f mux4x2.ut mux4x2.ncd 

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Xilinx\Projects\comparado2bits\comparador2bits.ncd
-OUTFILE=C:\Xilinx\Projects\comparado2bits\comparador2bits.bit
-FAMILY=Spartan3E
-PART=xc3s100e-5cp132
-WORKINGDIR=C:\Xilinx\Projects\comparado2bits
-LICENSE=WebPack
-USER_INFO=__0_0_0

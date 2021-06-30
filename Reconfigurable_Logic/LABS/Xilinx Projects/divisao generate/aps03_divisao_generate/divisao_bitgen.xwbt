@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Ricardo\Xilinx\aps03_divisao_generate\divisao.ncd
-OUTFILE=C:\Users\Ricardo\Xilinx\aps03_divisao_generate\divisao.bit
-FAMILY=Spartan3E
-PART=xc3s100e-5cp132
-WORKINGDIR=C:\Users\Ricardo\Xilinx\aps03_divisao_generate
-LICENSE=WebPack
-USER_INFO=179504511_180332158_0_034

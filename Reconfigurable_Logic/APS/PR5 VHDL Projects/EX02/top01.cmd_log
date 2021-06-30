@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "C:/Xilinx/Projects/PR5/EX02/top01.xst" -ofn "C:/Xilinx/Projects/PR5/EX02/top01.syr" 

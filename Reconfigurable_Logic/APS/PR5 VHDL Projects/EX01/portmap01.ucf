@@ -1,6 +1,0 @@
-net reset loc = G12;
-net mclk loc = B8;
-
-net clk1 loc = m11;
-net clk2 loc = p7;
-
