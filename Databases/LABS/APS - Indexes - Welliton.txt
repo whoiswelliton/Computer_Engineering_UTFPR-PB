@@ -1,0 +1,154 @@
+--------------------------------[ TABELAS ]--------------------------------
+
+CREATE TABLE Aluno(
+	Nome VARCHAR NOT NULL,
+	RA DECIMAL(7) ,
+	DataNasc DATE NOT NULL,
+	Idade integer,
+	NomeMae VARCHAR NOT NULL,
+	Cidade VARCHAR,
+	Estado CHAR(2),
+	Curso VARCHAR,
+	Periodo integer
+);
+CREATE TABLE Discip(
+	Sigla CHAR(7) NOT NULL,
+	Nome VARCHAR NOT NULL,
+	SiglaPreReq VARCHAR,
+	NNCred DECIMAL(2) NOT NULL,
+	Monitor DECIMAL(8) UNIQUE,
+	Depto VARCHAR
+);
+	
+CREATE TABLE Matricula(
+	RA DECIMAL(7),
+	Sigla VARCHAR,
+	Ano integer,
+	Semestre integer ,
+	CodTurma integer NOT NULL,
+	NotaP1 NUMERIC(3,1), 
+	NotaP2 NUMERIC(3,1),
+	NotaTrab NUMERIC(3,1),
+	NotaFIM NUMERIC(3,1),
+	Frequencia decimal(3)
+);
+
+
+--------------------------------[ FUNÇÕES ]---------------------------------
+
+--- GERANDO TEXTOS ALEATÓRIOS 
+
+Create or replace function texto(tam integer) returns text as
+$$
+declare
+  chars text[] := '{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}';
+  result text := '';
+  i integer := 0;
+begin
+  if tam < 0 then
+    raise exception 'Tamanho dado nao pode ser menor que zero';
+  end if;
+  for i in 1..tam loop
+    result := result || chars[1+random()*(array_length(chars, 1)-1)];
+  end loop;
+  return result;
+end;
+
+$$ language plpgsql;
+
+--- NÚMEROS ALEATÓRIOS  (Quantidade máx de digitos por parametro)
+
+create or replace function numero(digitos integer) returns integer as
+$$
+	begin
+	return trunc(random()*power(10, digitos));
+	end;
+
+$$language plpgsql;
+
+--- DATAS ALEATÓRIAS (indicar período na funcao se quiser alterar)
+
+create or replace function data() returns date as
+$$
+	begin
+		return date(timestamp '1990-01-01 00:00:00' +
+		random() * (timestamp '2019-01-01 00:00:00' -
+		timestamp '1990-01-01 00:00:00'));
+	end;
+
+$$language plpgsql;
+
+--- GERANDO INSERÇÕES NA TABELA 'Aluno'
+
+do $$
+	begin
+		for i in 1..1000000 loop
+			insert into Aluno(Nome, RA, DataNasc, NomeMae, Cidade, Estado, Curso, Periodo)
+			values(texto(10), numero(8), data(), texto(10), texto(10), texto(2), texto(10), (numero(1)+1));
+		end loop;
+	end
+$$ language plpgsql
+
+
+
+--------------------------------[ EXERCÍCIOS ]---------------------------------
+
+EX 01)
+
+
+ALTER TABLE Aluno add constraint PK_RA Primary Key (RA);
+ALTER TABLE Discip add constraint PK_Sigla Primary Key (Sigla); 
+ALTER TABLE Discip add constraint FK_Sigla Foreign Key (SiglaPreReq) references Discip (Sigla);
+ALTER TABLE Discip add constraint FK_Monitor Foreign Key (Monitor) references Aluno (RA);
+ALTER TABLE Matricula add constraint PK_RA Primary Key (RA, Sigla, Ano, Semestre);
+ALTER TABLE Matricula add constraint FK_RA foreign Key (RA) References Aluno(RA);
+
+EX 02)
+
+CREATE UNIQUE INDEX IdxAlunoNNI ON Aluno (Nome, NomeMae, Idade);
+
+explain select * from aluno where Nome = '%Lucas%' and NomeMae = '%Lucia%' and Idade = 18;
+
+explain select * from aluno where Idade > 0;
+
+EX 03)
+
+a)
+
+explain select * from Aluno
+
+b) 
+
+alter table Aluno add column EstadoMatricula VARCHAR;
+update Aluno set EstadoMatricula = 'Ativa' where RA > 1000000  
+update Aluno set EstadoMatricula = 'Inativa' where RA < 1000000
+explain analyse select * from Aluno where EstadoMatricula == 'Ativa';
+
+c)
+
+create index idx_ESTADO on Aluno using gin(EstadoMatricula);
+explain analyse select Nome, Curso from Aluno where EstadoMatricula == 'Ativa';
+
+d)
+
+create index idx_PERIODO on Aluno using btree(RA) where Periodo > 5;
+explain analyse select RA from Aluno where Periodo > 5
+
+e)
+
+create index idx_APROVADOS on Matricula using btree(RA) where NotaFIM > 5,95 and Frequencia > 74,95;
+explain analyse select RA from Matricula where NotaFIM > 5,95 and Frequencia > 74,95;
+
+04)
+
+create index FK_Monitor on Discip using btree (Monitor);
+explain analyse select A.Nome from Aluno A, Discip D where A.RA = D.Monitor and A.Curso == 'Matemática';
+
+05)
+
+explain analyse select A.Nome from Aluno where Curso == 'Agronomia' and Periodo > 8;
+
+06)
+
+create index idx_CRED on Discip (NNCred)
+explain analyse select A.Nome from Discip where NNcred between 3 and 9;

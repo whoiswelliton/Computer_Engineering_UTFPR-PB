@@ -1,0 +1,110 @@
+------------------------------[ TABELAS ]------------------------------
+
+Cliente(
+	id_cli integer, 
+	CPF varchar, 
+	Nome varchar, 
+	data_reg date, 
+	valor_max_liberado integer
+);
+Emprestimo(
+	id_empr integer, 
+	data_empr date,
+	valor_total integer, 
+	nro_parcelas integer, 
+	quitado integer,  
+	FK_id_cli integer
+);
+
+-----------------------------[ FUNÇÕES ]------------------------------
+
+01)
+
+CREATE OR REPLACE FUNCTION ID_Cliente (Nome varchar)
+RETURNS integer as $$
+DECLARE 
+	ID_Cliente CLIENTE.id_cli%TYPE;
+
+	BEGIN
+		SELECT id_cli 
+		INTO strict ID_Cliente 
+		FROM Cliente as C where lower(C.Nome) = lower(Nome);
+		RETURN ID_Cliente;
+	EXCEPTION
+		WHEN NO_DATA_FOUND THEN
+			RAISE NOTICE 'O Cliente Não Existe';
+		WHEN TOO_MANY_ROWS THEN
+			RAISE NOTICE 'Existe mais de um cliente com esse Nome';
+	END;
+$$ language plpgsql;
+
+
+02)
+
+CREATE OR REPLACE FUNCTION Total_Emprestimos (ID_Cliente integer)
+RETURNS integer as $$
+DECLARE
+	total_devido integer;
+
+	BEGIN
+		SELECT SUM(E.valor_total - E.quitado)
+		INTO total_devido
+		FROM Cliente C, Emprestimo E 
+		WHERE C.id_cli = E.id_cli AND id_cli = c.id_cli
+		RETURN total_devido;  
+	END;	
+$$ language plpgsql;
+
+03)
+
+CREATE OR REPLACE FUNCTION Data_Registro (ID_Cliente integer)
+RETURNS DATE AS $$
+DECLARE
+	data CLIENTE.data_reg%TYPE;
+
+	BEGIN
+		SELECT data_reg INTO STRICT data
+		FROM Cliente C
+		WHERE C.id_cli = ID_Cliente;
+	EXCEPTION
+		WHERE NO_DATA_FOUND THEN 
+			RAISE NOTICE 'O Cliente Não Existe.';
+	END;	
+$$ language plpgsql;
+
+04)
+
+CREATE OR REPLACE FUNCTION Atualizar_Emprestimo (CPF VARCHAR, Novo INTEGER)
+RETURNS VOID AS $$
+	BEGIN 
+		UPDATE Cliente C SET C.valor_max_liberado = Novo
+		WHERE C.CPF = CPF;
+	END;
+$$ language plpgsql;
+
+05) 
+
+CREATE OR REPLACE FUNCTION Quitar_Emprestimo (ID_Emprestimo integer)
+RETURNS VOID AS $$
+	BEGIN 
+		UPDATE Emprestimo E SET E.quitado = E.valor_total;
+		WHERE E.empr = ID_Emprestimo;
+	END;
+$$ language plpgsql;
+
+06) 
+ 
+CREATE OR REPLACE FUNCTION Emprestimo_Antigo (ID_Cliente integer)
+RETURNS DECIMAL AS $$
+DECLARE
+	Valor Emprestimo.valor_total;
+	
+	BEGIN
+		SELECT E.valor_total INTO valor
+		FROM Emprestimo E
+		WHERE ID_Cliente = E.id_cli AND E.valor_total <> E.quitado 
+		AND E.data_empr = (SELECT MIN(E.data_empr) 
+		FROM Emprestimo E 
+		WHERE E.id_cli = ID_Cliente AND E.quitado <> E.valor_total)
+	END;
+$$ language plpgsql;

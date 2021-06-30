@@ -1,0 +1,102 @@
+------------------------------[ TABELAS ]------------------------------
+
+create table Funcionario(
+	id_func smallint primary key, 
+	CPF varchar, 
+	Nome varchar, 
+	data_reg date,
+	id_dep smallint not null
+);
+create table Departamento(
+	id_dep smallint primary key, 
+	nome varchar, 
+	numer_funcionarios smallint, 
+	max_mesas smallint, 
+	lotacao varchar
+);
+
+-----------------------------[ TRIGGERS ]------------------------------
+01)
+
+create or replace function atualiza_numero_func()
+returns trigger as $$
+	begin
+		update Departamento set numer_funcionarios = numer_funcionarios + 1 where new.id_dep = id_dep;
+		RETURN NEW;
+	end;
+$$ language plpgsql;
+create trigger numero_func before insert on funcionario
+for each row execute procedure atualiza_numero_func();
+
+02)
+
+create or replace function remove_func_dep()
+returns trigger as $$
+	begin
+		update Departamento set numer_funcionarios = numer_funcionarios - 1 where new.id_dep = id_dep;
+		RETURN NEW;
+	end;
+$$ language plpgsql;
+create trigger remove_func_dep before delete on funcionario
+for each row execute procedure remove_func_dep();
+
+03)
+
+create or replace function troca_dep_func()
+returns trigger as $$ 
+	begin
+		update Departamento set numer_funcionarios = numer_funcionarios - 1 where old.id_dep = id_dep;
+		
+		update Departamento set numer_funcionarios = numer_funcionarios + 1 where new.id_dep = id_dep;
+		RETURN NEW;
+	end;
+$$ language plpgsql;
+create trigger troca_dep before update on funcionario
+for each row execute procedure troca_dep_func();
+
+04)
+
+create or replace function check_dados_func()
+returns trigger as $$
+	declare
+		vet_cpf char [3];
+	begin
+		if(new.data_reg >= current_date) then
+			raise exception 'A data de registro é maior que a data de hoje';
+		end if;
+		new.nome := lower(new.nome);
+		vet_cpf[0] := SUBSTRING (new.cpf FROM 3 for 3 );
+		vet_cpf[1] := SUBSTRING (new.cpf FROM 7 for 7 );
+		vet_cpf[2] := SUBSTRING (new.cpf FROM 11 for 11);
+		if (vet_cpf[0] <> '.' or vet_cpf[1] <> '.' or vet_cpf[2] <> '-') then
+			raise exception 'Cpf invalido';
+		end if;
+		return new;
+	end;
+$$ language plpgsql;
+create trigger check_update before update or insert on funcionario
+for each row execute procedure check_dados_func();
+
+05)
+
+create or replace function atualizalotacao()
+returns trigger as $$
+	declare 
+	begin
+		if (new.numer_funcionarios <= new.max_mesas * 0,3) then 
+			update departamento set new.lotacao = 'Minimo';
+		elseif(new.numer_funcionarios <= new.max_mesas * 0,5 and new.numer_funcionarios >= new.max_mesas * 0,3 ) then 
+			update departamento set new.lotacao = 'Medio';
+		elseif (new.numer_funcionarios >= new.max_mesas * 0,5 and new.numer_funcionarios <= new.max_mesas * 0,8) then 
+			update departamento set new.lotacao = 'Parcialmente Cheio'; 
+		elseif (new.numer_funcionarios >= new.max_mesas * 0,8 and new.numer_funcionarios <= new.max_mesas * 1) then 
+			update departamento set new.lotacao = 'Cheio'; 
+		else
+			update departamento set new.lotacao = 'Esgotado'; 
+		end if;
+		return new;
+	end;
+$$ language plpgsql;
+
+create trigger atualiza_lotaçao after update on departamento
+for each row execute procedure atualizalotacao();
