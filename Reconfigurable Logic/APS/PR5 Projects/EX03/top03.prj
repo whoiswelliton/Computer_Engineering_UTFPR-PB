@@ -1,0 +1,7 @@
+vhdl work "meupacote03.vhd"
+vhdl work "decod7seg.vhd"
+vhdl work "clkgen8.vhd"
+vhdl work "clkgen4.vhd"
+vhdl work "clkgen2.vhd"
+vhdl work "clkgen16.vhd"
+vhdl work "top03.vhd"

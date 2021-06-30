@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Xilinx/Projects/comparado2bits/tb_comparador2bits_isim_beh.exe" -prj "C:/Xilinx/Projects/comparado2bits/tb_comparador2bits_beh.prj" "work.tb_comparador2bits" 

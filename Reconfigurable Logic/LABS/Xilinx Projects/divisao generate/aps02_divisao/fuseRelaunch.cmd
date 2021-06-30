@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ricardo/Xilinx/aps02_divisao/tb_divisao_isim_beh.exe" -prj "C:/Users/Ricardo/Xilinx/aps02_divisao/tb_divisao_beh.prj" "work.tb_divisao" 

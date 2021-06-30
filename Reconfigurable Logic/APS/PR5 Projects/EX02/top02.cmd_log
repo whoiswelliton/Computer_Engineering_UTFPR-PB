@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Xilinx/Projects/PR5/EX02/top02.xst" -ofn "C:/Xilinx/Projects/PR5/EX02/top02.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc portmap02.ucf -p xc3s100e-cp132-5 top02.ngc top02.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o top02_map.ncd top02.ngd top02.pcf 
+par -w -intstyle ise -ol high -t 1 top02_map.ncd top02.ncd top02.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top02.twx top02.ncd -o top02.twr top02.pcf -ucf portmap02.ucf 
+bitgen -intstyle ise -f top02.ut top02.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projects/PR5/EX02/top02.xst" -ofn "C:/Xilinx/Projects/PR5/EX02/top02.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc portmap02.ucf -p xc3s100e-cp132-5 top02.ngc top02.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o top02_map.ncd top02.ngd top02.pcf 
+par -w -intstyle ise -ol high -t 1 top02_map.ncd top02.ncd top02.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top02.twx top02.ncd -o top02.twr top02.pcf -ucf portmap02.ucf 
+bitgen -intstyle ise -f top02.ut top02.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projects/PR5/EX02/top02.xst" -ofn "C:/Xilinx/Projects/PR5/EX02/top02.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc portmap02.ucf -p xc3s100e-cp132-5 top02.ngc top02.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o top02_map.ncd top02.ngd top02.pcf 
+par -w -intstyle ise -ol high -t 1 top02_map.ncd top02.ncd top02.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top02.twx top02.ncd -o top02.twr top02.pcf -ucf portmap02.ucf 
+bitgen -intstyle ise -f top02.ut top02.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Projects/PR5/EX02/top02.xst" -ofn "C:/Xilinx/Projects/PR5/EX02/top02.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc portmap02.ucf -p xc3s100e-cp132-5 top02.ngc top02.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o top02_map.ncd top02.ngd top02.pcf 
+par -w -intstyle ise -ol high -t 1 top02_map.ncd top02.ncd top02.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top02.twx top02.ncd -o top02.twr top02.pcf -ucf portmap02.ucf 
+bitgen -intstyle ise -f top02.ut top02.ncd 

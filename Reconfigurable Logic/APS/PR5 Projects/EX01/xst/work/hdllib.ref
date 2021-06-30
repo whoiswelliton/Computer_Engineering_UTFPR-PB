@@ -1,0 +1,7 @@
+EN clkgen1 NULL C:/Xilinx/Projects/PR5/EX01/clkgen1.vhd sub00/vhpl00 1576265235
+EN clkgen2 NULL C:/Xilinx/Projects/PR5/EX01/clkgen2.vhd sub00/vhpl02 1576265237
+AR clkgen2 behavioral C:/Xilinx/Projects/PR5/EX01/clkgen2.vhd sub00/vhpl03 1576265238
+PH meupacote01 NULL C:/Xilinx/Projects/PR5/EX01/meupacote01.vhd sub00/vhpl04 1576265234
+AR top01 behavioral C:/Xilinx/Projects/PR5/EX01/top01.vhd sub00/vhpl06 1576265240
+EN top01 NULL C:/Xilinx/Projects/PR5/EX01/top01.vhd sub00/vhpl05 1576265239
+AR clkgen1 behavioral C:/Xilinx/Projects/PR5/EX01/clkgen1.vhd sub00/vhpl01 1576265236

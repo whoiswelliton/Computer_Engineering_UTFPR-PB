@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Xilinx/Projects/Binario_Gray/bin_gray_isim_beh.exe" -prj "C:/Xilinx/Projects/Binario_Gray/bin_gray_beh.prj" "work.bin_gray" 

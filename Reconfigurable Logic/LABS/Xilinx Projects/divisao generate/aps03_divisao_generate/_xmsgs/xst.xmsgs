@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ricardo/Xilinx/aps03_divisao_generate/divisao.vhd</arg>&quot; line <arg fmt="%d" index="2">43</arg>: The result of a <arg fmt="%d" index="3">3</arg>x<arg fmt="%d" index="4">3</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">3</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+</messages>
+

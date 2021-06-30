@@ -1,0 +1,8 @@
+V3 3
+FL C:/Xilinx/Projects/BinarySorter/BinarySorter/binarysorter.vhd 2019/10/14.17:27:42 P.20131013
+EN work/binarysorter 1571084866 \
+      FL C:/Xilinx/Projects/BinarySorter/BinarySorter/binarysorter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/binarysorter/ARQ 1571084867 \
+      FL C:/Xilinx/Projects/BinarySorter/BinarySorter/binarysorter.vhd \
+      EN work/binarysorter 1571084866

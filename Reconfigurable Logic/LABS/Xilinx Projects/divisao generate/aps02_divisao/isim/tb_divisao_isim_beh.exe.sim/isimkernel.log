@@ -1,0 +1,29 @@
+Command line:
+   tb_divisao_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  49355
+
+Mon Sep 23 20:44:35 2019
+
+
+ Elaboration Time: 0.249601 sec
+
+ Current Memory Usage: 667.611 Meg
+
+ Total Signals          : 10
+ Total Nets             : 14
+ Total Signal Drivers   : 6
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 5
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 498
+Total Line Count : 9
+
+ Total Simulation Time: 0.234001 sec
+
+ Current Memory Usage: 667.611 Meg
+
+Mon Sep 23 20:49:37 2019
+

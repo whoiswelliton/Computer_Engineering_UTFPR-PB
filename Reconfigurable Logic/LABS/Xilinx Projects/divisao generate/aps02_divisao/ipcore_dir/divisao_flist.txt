@@ -1,0 +1,12 @@
+# Output products list for <divisao>
+divisao.asy
+divisao.gise
+divisao.ngc
+divisao.sym
+divisao.vhd
+divisao.vho
+divisao.xco
+divisao.xise
+divisao_flist.txt
+divisao_readme.txt
+divisao_xmdf.tcl
