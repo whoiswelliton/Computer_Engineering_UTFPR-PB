@@ -1,0 +1,13 @@
+inicio
+int : x , y , z , j , k ;
+int : abcdefgh ;
+int : AbCDe ;
+leia ( x ) ;
+leia ( y ) ;
+k := 5 ;
+j := 232342332 ;
+z := x + y ;
+y := ( z * x ) + ( y * z ) + k ;
+escreva ( z ) ;
+escreva ( y ) ;
+fim

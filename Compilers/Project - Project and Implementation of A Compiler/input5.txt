@@ -1,0 +1,10 @@
+/* programa de exemplo */
+inicio /* início do programa */
+int : x , y , j ;
+leia ( x ) ;
+j := 232342332 ;
+x := ads%% ; 
+y := ( z * x ) + ( y * z ) + k ;
+escreva ( y ) ;
+int : 23dAAs3lks6a ;
+fim

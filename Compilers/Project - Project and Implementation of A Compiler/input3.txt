@@ -1,0 +1,4 @@
+inicio
+int : x , y , z ;
+y := ( z * x ) * ( x + z ) ;
+fim

@@ -1,0 +1,8 @@
+/* programa de exemplo */
+inicio /* início do programa */
+int : x , y , z ; /* Declaração de variáveis */
+leia ( x ) ; /* entrada de um número */
+leia ( y ) ; /* entrada de um número */
+z := x + y ; /* soma x e y e armazena em z */
+escreva ( z ) ; /* saída de um número */
+fim /* término do programa */

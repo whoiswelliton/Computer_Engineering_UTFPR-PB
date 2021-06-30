@@ -1,0 +1,9 @@
+/* programa de exemplo */
+inicio /* início do programa */
+int : x , y , z , w ; /* Declaração de variáveis */
+leia ( x ) ;
+leia ( y ) ;
+z := x + y ;
+w := ( z * x ) * ( x + y ) ;
+escreva ( w ) ; /* saída de um número */
+fim /* término do programa */
