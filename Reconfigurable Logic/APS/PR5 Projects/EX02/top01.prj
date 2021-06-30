@@ -1,6 +1,0 @@
-vhdl work "meupacote02.vhd"
-vhdl work "clkgen8.vhd"
-vhdl work "clkgen4.vhd"
-vhdl work "clkgen2.vhd"
-vhdl work "clkgen16.vhd"
-vhdl work "top02.vhd"

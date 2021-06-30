@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Xilinx\Projects\mux4x2\mux4x2.ncd
-OUTFILE=C:\Xilinx\Projects\mux4x2\mux4x2.bit
-FAMILY=Spartan3E
-PART=xc3s100e-5cp132
-WORKINGDIR=C:\Xilinx\Projects\mux4x2
-LICENSE=WebPack
-USER_INFO=__0_0_0

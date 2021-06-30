@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Xilinx/Projects/BinarySorter/BinarySorter/tb_divisao_isim_beh.exe" -prj "C:/Xilinx/Projects/BinarySorter/BinarySorter/tb_divisao_beh.prj" "work.tb_divisao" 

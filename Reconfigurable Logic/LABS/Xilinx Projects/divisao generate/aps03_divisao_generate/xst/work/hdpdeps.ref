@@ -1,8 +1,0 @@
-V3 3
-FL C:/Users/Ricardo/Xilinx/aps03_divisao_generate/divisao.vhd 2019/10/01.23:49:40 P.20131013
-EN work/divisao 1569984603 \
-      FL C:/Users/Ricardo/Xilinx/aps03_divisao_generate/divisao.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/divisao/ent 1569984604 \
-      FL C:/Users/Ricardo/Xilinx/aps03_divisao_generate/divisao.vhd \
-      EN work/divisao 1569984603

@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/Ricardo/Xilinx/aps03_divisao_generate/tb_divisao_isim_beh.exe" -prj "C:/Users/Ricardo/Xilinx/aps03_divisao_generate/tb_divisao_beh.prj" "work.tb_divisao" 

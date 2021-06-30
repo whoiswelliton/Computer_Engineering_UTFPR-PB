@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/tb_barrel_shifter_isim_beh.exe" -prj "C:/Users/Ricardo/Xilinx/asp02_barrel_shifter/tb_barrel_shifter_beh.prj" "work.tb_barrel_shifter" 
