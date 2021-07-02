@@ -1,4 +1,5 @@
-**Computer Engineering**
+<<<<<<< HEAD
+*Computer Engineering*
 
 Some of the projects, exercises, algorithms and data structures developed during my bachelor degree in Computer Engineering at UTFPR-PB
 
