@@ -1,0 +1,10 @@
+insert into secao (nome_secao, corredor, prateleira) values ('MATEMATICA', 1, 2);
+insert into secao (nome_secao, corredor, prateleira) values ('GEOMETRIA', 1, 1);
+insert into secao (nome_secao, corredor, prateleira) values ('FISICA', 1, 3);
+insert into secao (nome_secao, corredor, prateleira) values ('CALCULO', 1, 4);
+insert into secao (nome_secao, corredor, prateleira) values ('VARIAVEIS COMPLEXAS', 2, 1);
+insert into secao (nome_secao, corredor, prateleira) values ('PORTUGUES', 2, 2);
+insert into secao (nome_secao, corredor, prateleira) values ('HISTORIA', 2, 3);
+insert into secao (nome_secao, corredor, prateleira) values ('GEOGRAGIA', 3, 1);
+insert into secao (nome_secao, corredor, prateleira) values ('ENGENHARIA DE SOFTWARE', 4, 1);
+insert into secao (nome_secao, corredor, prateleira) values ('BANCO DE DADOS', 5, 1);

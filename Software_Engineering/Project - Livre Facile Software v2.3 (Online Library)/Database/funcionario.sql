@@ -1,0 +1,12 @@
+--funcionario do 10000000000 ao 10000000009
+insert into funcionario (cpf, senha, nome, cargo) values(01234567890, '1', 'Douglas Ramos','gerente')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000000, '1', 'Andre Jose','Atendente','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000001, '1', 'Jown Snow','reviveu','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000002, '1', 'Arya Stark','mata quem mata geral','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000003, '1', 'Sansa Stark','Atendente','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000004, '1', 'Rei da Noite','Mata geral','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000005, '1', 'Cersei','Rainha','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000006, '1', 'Corvo','Ve tudo','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000007, '1', 'Hordorrrrrrr','Fechador de porta','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000008, '1', '','Daneryes','Faz nada','01234567890')
+insert into funcionario (cpf, senha, nome, cargo, cpf_gerente) values(10000000009, '1', 'Milady','Atendente','01234567890')
