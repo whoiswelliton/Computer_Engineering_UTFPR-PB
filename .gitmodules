@@ -1,3 +1,6 @@
 [submodule "Algorithms_and_Data_Structures"]
 	path = Algorithms_and_Data_Structures
 	url = git@github.com:whoiswelliton/Algorithms_and_Data_Structures.git
+[submodule "Programming_Fundamentals"]
+	path = Programming_Fundamentals
+	url = git@github.com:whoiswelliton/Programming_Fundamentals.git
