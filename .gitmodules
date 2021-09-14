@@ -7,3 +7,6 @@
 [submodule "Compilers"]
 	path = Compilers
 	url = git@github.com:whoiswelliton/Compilers.git
+[submodule "Computer_Networks"]
+	path = Computer_Networks
+	url = git@github.com:whoiswelliton/Computer_Networks.git
