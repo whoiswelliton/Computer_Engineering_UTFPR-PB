@@ -1,5 +1,0 @@
-inicio
-int : x , y ; 
-leia ( x ) ;
-escreva ( x ) ; 
-fim
