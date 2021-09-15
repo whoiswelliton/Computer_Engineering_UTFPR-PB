@@ -19,3 +19,6 @@
 [submodule "Object-Oriented_Programming"]
 	path = Object-Oriented_Programming
 	url = git@github.com:whoiswelliton/Object-Oriented_Programming.git
+[submodule "Digital_Circuits_and_Systems"]
+	path = Digital_Circuits_and_Systems
+	url = git@github.com:whoiswelliton/Digital_Circuits_and_Systems.git
