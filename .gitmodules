@@ -10,3 +10,9 @@
 [submodule "Computer_Networks"]
 	path = Computer_Networks
 	url = git@github.com:whoiswelliton/Computer_Networks.git
+[submodule "Electronics"]
+	path = Electronics
+	url = git@github.com:whoiswelliton/Electronics.git
+[submodule "Electronics_and_Instrumentation"]
+	path = Electronics_and_Instrumentation
+	url = git@github.com:whoiswelliton/Electronics_and_Instrumentation.git
