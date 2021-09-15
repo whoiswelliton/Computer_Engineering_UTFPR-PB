@@ -22,3 +22,6 @@
 [submodule "Digital_Circuits_and_Systems"]
 	path = Digital_Circuits_and_Systems
 	url = git@github.com:whoiswelliton/Digital_Circuits_and_Systems.git
+[submodule "Reconfigurable_Logic"]
+	path = Reconfigurable_Logic
+	url = git@github.com:whoiswelliton/Reconfigurable_Logic.git
