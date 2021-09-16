@@ -28,3 +28,6 @@
 [submodule "Computer_Security"]
 	path = Computer_Security
 	url = git@github.com:whoiswelliton/Computer_Security.git
+[submodule "Distributed_Systems"]
+	path = Distributed_Systems
+	url = git@github.com:whoiswelliton/Distributed_Systems.git
