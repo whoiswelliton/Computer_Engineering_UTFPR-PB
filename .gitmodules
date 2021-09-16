@@ -25,3 +25,6 @@
 [submodule "Reconfigurable_Logic"]
 	path = Reconfigurable_Logic
 	url = git@github.com:whoiswelliton/Reconfigurable_Logic.git
+[submodule "Computer_Security"]
+	path = Computer_Security
+	url = git@github.com:whoiswelliton/Computer_Security.git
