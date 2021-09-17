@@ -31,3 +31,6 @@
 [submodule "Distributed_Systems"]
 	path = Distributed_Systems
 	url = git@github.com:whoiswelliton/Distributed_Systems.git
+[submodule "Operational_Systems"]
+	path = Operational_Systems
+	url = git@github.com:whoiswelliton/Operational_Systems.git
