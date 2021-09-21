@@ -34,3 +34,6 @@
 [submodule "Operational_Systems"]
 	path = Operational_Systems
 	url = git@github.com:whoiswelliton/Operational_Systems.git
+[submodule "Databases"]
+	path = Databases
+	url = git@github.com:whoiswelliton/Databases.git
