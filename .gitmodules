@@ -40,3 +40,6 @@
 [submodule "Control_Systems"]
 	path = Control_Systems
 	url = git@github.com:whoiswelliton/Control_Systems.git
+[submodule "Undergraduate_Thesis"]
+	path = Undergraduate_Thesis
+	url = git@github.com:whoiswelliton/Undergraduate_Thesis.git
